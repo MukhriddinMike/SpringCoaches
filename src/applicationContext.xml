@@ -9,8 +9,29 @@
 	
     <!-- Define your beans here -->
     
+    <!--  Define the dependency -->
+ 	<bean id = "myFortune" 
+ 	class = "com.mikecode.springcoach.HappyFortuneService"
+ 	>
+ 	
+ 	
+ 	
+ 	</bean>   
+ 
+    
  	<bean id="myCoach"
- 		class="com.mikecode.springcoach.BaseballCoach">	 		
+ 		class="com.mikecode.springcoach.TrackCoach">	 		
+ 		
+ 		
+ 		<!--  Setup the constructor injection -->
+ 		<constructor-arg ref="myFortune" />
+ 	</bean>
+ 	
+ 	<bean id="myCricketCoach" 
+ 	class="com.mikecode.springcoach.CricketCoach">
+ 	
+ 	<!--  Setup setter injection -->
+ 	<property name="fortuneService"  ref="myFortune"></property>
  	</bean>
     
 </beans>

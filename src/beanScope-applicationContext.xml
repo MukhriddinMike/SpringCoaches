@@ -7,18 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-     	<!-- load the properties file from src -->
-    
-    <context:property-placeholder location="classpath:sport.properties" />
-	
+     
     <!-- Define your beans here -->
     
     <!--  Define the dependency -->
  	<bean id = "myFortune" 
- 	class = "com.mikecode.springcoach.HappyFortuneService"
- 	>
- 	
- 	
+ 	class = "com.mikecode.springcoach.HappyFortuneService">
  	
  	</bean>   
  
@@ -31,30 +25,7 @@
  		<constructor-arg ref="myFortune" />
  	</bean>
  	
- 	<bean id="myCricketCoach" 
- 	class="com.mikecode.springcoach.CricketCoach">
  	
- 	<!--  Setup setter injection -->
- 	<property name="fortuneService"  ref="myFortune"></property>
- 	
- 	
- 	<!--  Literal values -->
- 	
- 	<!-- <property name="emailAdd"  value="miwady@mail.ru"></property> // will call setEmailAdd
- 	
- 	<property name="team"  value="Mike Inc"></property> // will call setTeam -->
- 	
- 	<!--  access file  -->
- 	
- 	<property name="emailAdd"  value="${foo.email}"></property>	
- 	<property name="team"  value="${foo.team}"></property>
- 		
- 	<!--  -->
- 	
- 	
- 	
- 
- 	</bean>
     
 </beans>
 

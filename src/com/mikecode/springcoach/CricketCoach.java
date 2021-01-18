@@ -4,7 +4,32 @@ public class CricketCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
+	//add new fields for email adn team;
 	
+	private String emailAdd;
+	private String team;
+	
+	
+	
+	
+	public String getEmailAdd() {
+		return emailAdd;
+	}
+
+	public void setEmailAdd(String emailAdd) {
+		System.out.println("Cricket Coach inside setter method Email");
+		this.emailAdd = emailAdd;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		System.out.println("Cricket Coach finside setter method Team");
+		this.team = team;
+	}
+
 	// no-arg contructor
 	public  CricketCoach() {
 		System.out.println("Cricket Coach file with inside no arguments");

@@ -20,9 +20,15 @@ public class SetterDApp {
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
 		
+		
+		//call new setter methods
+		
+		System.out.println(theCoach.getEmailAdd());
+		System.out.println(theCoach.getTeam());
+		
 		// close the context
 		context.close();
-
+ 
 	}
 
 }

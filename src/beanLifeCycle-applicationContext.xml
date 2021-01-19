@@ -19,7 +19,8 @@
     
  	<bean id="myCoach"
  		class="com.mikecode.springcoach.TrackCoach"
- 		scope="prototype">	 		
+ 		init-method="writeMyCode"
+ 		destroy-method="cleanMyCode">	 		
  		
  		
  		<!--  Setup the constructor injection -->
